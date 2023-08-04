@@ -4,17 +4,17 @@ import org.junit.Test;
 public class FactorialTest {
     @Test
     public void factorialOf1() {
-        int expected = 1;
-        int n = 1;
-        int actual = RecursiveMath.factorial(n);
+        long expected = 1;
+        long n = 1;
+        long actual = RecursiveMath.factorial(n);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void factorialOf5() {
-        int expected = 5*4*3*2*1;
-        int n = 5;
-        int actual = RecursiveMath.factorial(n);
+        long expected = 5*4*3*2*1;
+        long n = 5;
+        long actual = RecursiveMath.factorial(n);
         Assert.assertEquals(expected, actual);
     }
 }

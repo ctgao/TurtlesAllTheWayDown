@@ -1,5 +1,5 @@
 public class RecursiveMath {
-    public static int factorial(int n){
+    public static long factorial(long n){
         if(n < 0){
             // BAD RESULT
             return -1;
@@ -15,7 +15,7 @@ public class RecursiveMath {
      * @param y positive number!
      * @return greatest common divisor of x and y
      */
-    public static int greatestCommonDivisor(int x, int y){
+    public static long greatestCommonDivisor(long x, long y){
         if(x < 0 || y < 0){
             //BAD RESULT
             return -1;
@@ -32,5 +32,15 @@ public class RecursiveMath {
             // swapping them around to fit our recursive format
             return greatestCommonDivisor(y, x);
         }
+    }
+
+    // non-recursive implementation
+    public static long gcd2(long p, long q) {
+        while (q != 0) {
+            long temp = q;
+            q = p % q;
+            p = temp;
+        }
+        return p;
     }
 }
